@@ -1,7 +1,9 @@
 asgiref==3.8.1
+dj-database-url==2.3.0
 Django==5.2
+python-decouple==3.8
 sqlparse==0.5.3
 typing_extensions==4.13.2
-gunicorn
-whitenoise
-psycopg2-binary
+
+dj-config-url~=0.1.1
+decouple~=0.0.7
