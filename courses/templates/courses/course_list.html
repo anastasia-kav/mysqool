@@ -15,17 +15,21 @@
     </header>
 
     <section class="course-list">
-        <ul>
-            {% for course in courses %}
-            <li>
-                <a href="{% url 'course_detail' course.pk %}">
-                    <img src="{% static 'course_image.jpg' %}" alt="{{ course.name }}">
-                    {{ course.name }}
-                </a>
-                <p>{{ course.description }}</p>
-            </li>
-            {% endfor %}
-        </ul>
+        {% if courses %}
+            <ul>
+                {% for course in courses %}
+                <li>
+                    <a href="{% url 'course_detail' course.pk %}">
+                        <img src="{% static 'course_image.jpg' %}" alt="{{ course.name }}">
+                        {{ course.name }}
+                    </a>
+                    <p>{{ course.description }}</p>
+                </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Нет курсов доступных на данный момент.</p>
+        {% endif %}
     </section>
 
     <footer>
