@@ -10,8 +10,12 @@ def home(request):
 
 # Страница со всеми курсами
 def course_list(request):
-    courses = Course.objects.all()  # Получаем все курсы
-    return render(request, 'courses/course_list.html', {'courses': courses})  # Рендерим шаблон с курсами
+    try:
+        courses = Course.objects.all()
+    except OperationalError:
+        courses = None  # Возвращаем None или пустой список, если ошибка базы данных
+
+    return render(request, 'courses/course_list.html', {'courses': courses})
 
 
 # Детальная страница курса

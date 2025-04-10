@@ -15,7 +15,9 @@
     </header>
 
     <section class="course-list">
-        {% if courses %}
+        {% if courses is None %}
+            <p>Не удалось загрузить курсы. Возможно, проблема с базой данных.</p>
+        {% elif courses %}
             <ul>
                 {% for course in courses %}
                 <li>
