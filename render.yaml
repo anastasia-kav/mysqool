@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: my-school
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn my_school.wsgi"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: my_school.settings
+      - key: '5%#1c)o7z@5csdzldhm5+zm%gi8793&n7ck1js=dax%u6+9+az'
+        value: your-very-secret-key
+      - key: DEBUG
+        value: False
+      - key: ALLOWED_HOSTS
+        value: your-app-name.onrender.com
