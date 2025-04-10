@@ -1,2 +1,29 @@
-<h1>{{ course.title }}</h1>
-<p>{{ course.description }}</p>
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ course.name }}</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>{{ course.name }}</h1>
+    </header>
+
+    <section class="course-details">
+        <div class="course-image">
+            <img src="{% static 'course_detail_image.jpg' %}" alt="{{ course.name }}">
+        </div>
+        <p>{{ course.description }}</p>
+        <p><strong>Продолжительность:</strong> {{ course.duration }} часов</p>
+        <p><strong>Цена:</strong> {{ course.price }} рублей</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Онлайн Школа. Все права защищены.</p>
+    </footer>
+</body>
+</html>

@@ -1,6 +1,35 @@
-<h1>Courses</h1>
-<ul>
-  {% for course in courses %}
-    <li><a href="{{ course.id }}/">{{ course.title }}</a></li>
-  {% endfor %}
-</ul>
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Курсы онлайн школы</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Наши курсы</h1>
+        <p>Выберите курс, чтобы начать учёбу!</p>
+    </header>
+
+    <section class="course-list">
+        <ul>
+            {% for course in courses %}
+            <li>
+                <a href="{% url 'course_detail' course.pk %}">
+                    <img src="{% static 'course_image.jpg' %}" alt="{{ course.name }}">
+                    {{ course.name }}
+                </a>
+                <p>{{ course.description }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Онлайн Школа. Все права защищены.</p>
+    </footer>
+</body>
+</html>

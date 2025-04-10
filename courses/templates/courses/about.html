@@ -1,12 +1,35 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Онлайн-школа MySQooL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать в онлайн школу!</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 <body>
-    <h1>О нашей онлайн-школе</h1>
-    <p>Здесь будет информация о нашей школе, миссии, курсах и преподавателях.</p>
+    <header>
+        <div class="hero-image">
+            <h1>Добро пожаловать в нашу онлайн школу!</h1>
+            <p>Мы предлагаем лучшие курсы для профессионалов и новичков.</p>
+        </div>
+    </header>
 
+    <section class="about-school">
+        <h2>О школе</h2>
+        <p>Наша онлайн школа предлагает курсы по различным направлениям: программирование, дизайн, маркетинг и многое другое. Воспользуйтесь нашими курсами, чтобы развить ваши навыки и улучшить карьерные возможности!</p>
+    </section>
+
+    <section class="courses">
+        <h2>Наши курсы</h2>
+        <ul>
+            <li><a href="{% url 'course_list' %}">Посмотреть все курсы</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Онлайн Школа. Все права защищены.</p>
+    </footer>
 </body>
 </html>
