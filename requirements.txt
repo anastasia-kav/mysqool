@@ -7,3 +7,4 @@ typing_extensions==4.13.2
 
 dj-config-url~=0.1.1
 decouple~=0.0.7
+gunicorn==20.1.0
