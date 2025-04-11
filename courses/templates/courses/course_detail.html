@@ -13,6 +13,11 @@
         <h1>{{ course.name }}</h1>
     </header>
 
+    <nav>
+        <a href="{% url 'home' %}">Главная страница</a>
+        <a href="{% url 'course_list' %}">Наши курсы</a>
+    </nav>
+
     <section class="course-details">
         <div class="course-image">
             <img src="{% static 'course_detail_image.jpg' %}" alt="{{ course.name }}">
@@ -23,7 +28,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Онлайн Школа. Все права защищены.</p>
+        <p>&copy; 2025 MySQooL. Все права защищены.</p>
     </footer>
 </body>
 </html>

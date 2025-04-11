@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class Course(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
-    image = models.ImageField(upload_to='course_images/', blank=True, null=True)
+    image = models.ImageField(upload_to='course_images/', null=True, blank=True)  # Добавляем поле для изображения
 
     def __str__(self):
         return self.name
