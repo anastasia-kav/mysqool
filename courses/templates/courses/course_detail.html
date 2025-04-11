@@ -25,19 +25,31 @@
         <p>{{ course.description }}</p>
         <p><strong>Продолжительность:</strong> {{ course.duration }} часов</p>
         <p><strong>Цена:</strong> {{ course.price }} рублей</p>
+    </section>
 
         <h2>Список уроков</h2>
-    <ul>
+<table>
+    <thead>
+        <tr>
+            <th>№</th>
+            <th>Название урока</th>
+            <th>Содержание</th>
+        </tr>
+    </thead>
+    <tbody>
         {% for lesson in lessons %}
-            <li>
-                <h3>{{ lesson.title }}</h3>
-                <p>{{ lesson.content }}</p>
-            </li>
+        <tr>
+            <td>{{ forloop.counter }}</td> <!-- Выводим номер урока -->
+            <td>{{ lesson.title }}</td>
+            <td>{{ lesson.content }}</td>
+        </tr>
         {% empty %}
-            <p>Уроки ещё не добавлены.</p>
+        <tr>
+            <td colspan="3">Уроки ещё не добавлены.</td>
+        </tr>
         {% endfor %}
-    </ul>
-    </section>
+    </tbody>
+</table>
 
     <footer>
         <p>&copy; 2025 MySQooL. Все права защищены.</p>
