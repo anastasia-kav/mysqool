@@ -31,6 +31,10 @@ INSTALLED_APPS = [
     'courses'
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://mysqool-production.up.railway.app',
+]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -66,7 +70,9 @@ WSGI_APPLICATION = 'my_school.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(default='sqlite:///db.sqlite3')
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL')
+    )
 }
 
 

@@ -4,7 +4,7 @@ Django==5.2
 python-decouple==3.8
 sqlparse==0.5.3
 typing_extensions==4.13.2
-
+Pillow
 dj-config-url~=0.1.1
 decouple~=0.0.7
 gunicorn==20.1.0
