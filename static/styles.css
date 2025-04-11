@@ -19,6 +19,7 @@ header {
     padding: 2rem;
 }
 
+/* Навигация */
 nav {
     background-color: #444;
     padding: 0.5rem;
@@ -29,12 +30,14 @@ nav a {
     margin: 0 1rem;
     text-decoration: none;
     font-weight: bold;
+    font-size: 18px; /* Сделаем текст чуть больше */
 }
 
 nav a:hover {
     text-decoration: underline;
 }
 
+/* Секция с курсами */
 section {
     padding: 20px;
     margin-bottom: 40px;
@@ -47,20 +50,108 @@ section {
 
 .course-list li {
     margin-bottom: 2rem;
+    text-align: center; /* Выравнивание текста в списке */
 }
 
+.course-list li a {
+    text-decoration: none;
+    color: white;
+    background-color: #28a745; /* Зеленый фон */
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.course-list li a:hover {
+    background-color: #218838; /* Тёмно-зеленый цвет при наведении */
+}
+
+/* Изображения курсов */
 .course-list img {
     width: 300px;
     height: auto;
     display: block;
     margin: 0 auto 1rem;
+    border-radius: 8px; /* Закругленные углы для изображений */
 }
 
+/* Футер */
 footer {
     text-align: center;
-    padding: 20px 0; /* Устанавливаем отступ для футера */
-    background-color: #f1f1f1; /* Для улучшения видимости */
+    padding: 20px 0; /* Отступы */
+    background-color: #f1f1f1; /* Легкий фон для футера */
     position: relative;
     width: 100%;
-    margin-top: auto; /* Привязывает футер к низу */
+    margin-top: auto; /* Привязка футера к низу страницы */
+}
+
+footer p {
+    margin: 0; /* Убираем лишний отступ для текста в футере */
+}
+
+/* Блоки с текстом */
+h1, h2 {
+    font-size: 2rem; /* Размер заголовков */
+    color: #333;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Для кнопок в навигации */
+nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #0056b3;
+}
+
+/* Для выравнивания всего контента */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Центрирование текста в заголовках */
+h1, h2 {
+    text-align: center;
+}
+
+/* Стили для формы (если она есть) */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Стили для кнопок на странице курсов */
+.course-list li a {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.course-list li a:hover {
+    background-color: #218838;
 }

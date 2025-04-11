@@ -19,9 +19,7 @@
         <a href="{% url 'course_list' %}">Наши курсы</a>
     </nav>
 
-
     <section class="course-list">
-{#        <p>Нет курсов доступных на данный момент.</p>#}
         {% if courses is None %}
             <p>Не удалось загрузить курсы. Возможно, проблема с базой данных.</p>
         {% elif courses %}
@@ -29,7 +27,11 @@
                 {% for course in courses %}
                 <li>
                     <a href="{% url 'course_detail' course.pk %}">
-                        <img src="{% static 'course_image.jpg' %}" alt="{{ course.name }}">
+                        {% if course.image %}
+                            <img src="{{ course.image.url }}" alt="{{ course.name }}">
+                        {% else %}
+                            <img src="{% static 'default_image.jpg' %}" alt="Изображение курса">
+                        {% endif %}
                         {{ course.name }}
                     </a>
                     <p>{{ course.description }}</p>
