@@ -162,3 +162,37 @@ input, select, textarea {
 .course-list li a:hover {
     background-color: #5a6a6f;
 }
+
+
+/* Добавляем стиль для кнопки "Посмотреть все курсы" */
+.view-courses-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #4b5d63; /* Серо-голубой фон */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50px; /* Закругленные углы */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px; /* Отступ сверху */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для кнопки */
+}
+
+.view-courses-button:hover {
+    background-color: #6c7c80; /* Более светлый серо-голубой при наведении */
+    transform: translateY(-2px); /* Легкий подъём кнопки при наведении */
+}
+
+.view-courses-button:active {
+    transform: translateY(0); /* Когда кнопка нажата, она возвращается на место */
+}
+
+/* Для выравнивания кнопки по центру */
+.courses ul {
+    display: flex;
+    justify-content: center; /* Центрирование кнопки */
+    padding: 0;
+    list-style: none;
+}
