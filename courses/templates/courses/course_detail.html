@@ -22,8 +22,8 @@
         <div class="course-image">
             <img src="{% static 'course_detail_image.jpg' %}" alt="{{ course.name }}">
         </div>
-        <p>{{ course.description }}</p>
-        <p><strong>Продолжительность:</strong> {{ course.duration }} часов</p>
+        <p>{{ course.description | linebreaksbr }}</p>
+        <p><strong>Продолжительность (в часах):</strong> {{ course.duration }}</p>
         <p><strong>Цена:</strong> {{ course.price }} рублей</p>
     </section>
 
