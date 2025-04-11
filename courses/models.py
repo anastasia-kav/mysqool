@@ -9,9 +9,9 @@ class Course(models.Model):
     duration = models.IntegerField(verbose_name='Продолжительность (в часах)')
     price = models.DecimalField(max_digits=10, decimal_places=2, verbose_name='Цена (в рублях)')
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(args, kwargs)
-        self.lessons = None
+    # def __init__(self, *args, **kwargs):
+    #     super().__init__(args, kwargs)
+    #     self.lessons = None
 
     def __str__(self):
         return self.name
