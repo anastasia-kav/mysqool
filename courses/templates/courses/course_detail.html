@@ -25,6 +25,18 @@
         <p>{{ course.description }}</p>
         <p><strong>Продолжительность:</strong> {{ course.duration }} часов</p>
         <p><strong>Цена:</strong> {{ course.price }} рублей</p>
+
+        <h2>Список уроков</h2>
+    <ul>
+        {% for lesson in lessons %}
+            <li>
+                <h3>{{ lesson.title }}</h3>
+                <p>{{ lesson.content }}</p>
+            </li>
+        {% empty %}
+            <p>Уроки ещё не добавлены.</p>
+        {% endfor %}
+    </ul>
     </section>
 
     <footer>
