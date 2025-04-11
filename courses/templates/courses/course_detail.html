@@ -27,29 +27,30 @@
         <p><strong>Цена:</strong> {{ course.price }} рублей</p>
     </section>
 
-        <h2>Список уроков</h2>
-<table>
-    <thead>
-        <tr>
-            <th>№</th>
-            <th>Название урока</th>
-            <th>Содержание</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for lesson in lessons %}
-        <tr>
-            <td>{{ forloop.counter }}</td> <!-- Выводим номер урока -->
-            <td>{{ lesson.title }}</td>
-            <td>{{ lesson.content }}</td>
-        </tr>
-        {% empty %}
-        <tr>
-            <td colspan="3">Уроки ещё не добавлены.</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<h2>Список уроков</h2>
+    <table class="lessons-table">
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Название урока</th>
+                <th>Содержание</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for lesson in lessons %}
+            <tr>
+                <td>{{ forloop.counter }}</td> <!-- Выводим номер урока -->
+                <td>{{ lesson.title }}</td>
+                <td>{{ lesson.content|linebreaksbr }}</td> <!-- Применяем фильтр для переноса строк -->
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="3">Уроки ещё не добавлены.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
 
     <footer>
         <p>&copy; 2025 MySQooL. Все права защищены.</p>
