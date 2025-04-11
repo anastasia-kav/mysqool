@@ -14,21 +14,21 @@
         <p>Выберите курс, чтобы начать учёбу!</p>
     </header>
 
+    <!-- Навигация -->
     <nav>
         <a href="{% url 'home' %}">Главная страница</a>
         <a href="{% url 'course_list' %}">Наши курсы</a>
     </nav>
 
-
+    <!-- Секция с курсами -->
     <section class="course-list">
-{#        <p>Нет курсов доступных на данный момент.</p>#}
         {% if courses is None %}
             <p>Не удалось загрузить курсы. Возможно, проблема с базой данных.</p>
         {% elif courses %}
             <ul>
                 {% for course in courses %}
                 <li>
-                    <a href="{% url 'course_detail' course.pk %}">
+                    <a href="{% url 'course_detail' course.pk %}" class="view-courses-button">
                         {% if course.image %}
                             <img src="{{ course.image.url }}" alt="{{ course.name }}">
                         {% else %}
@@ -45,6 +45,7 @@
         {% endif %}
     </section>
 
+    <!-- Футер -->
     <footer>
         <p>&copy; 2025 MySQooL. Все права защищены.</p>
     </footer>
