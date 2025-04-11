@@ -109,9 +109,9 @@ h1 {
     color: #d0d0d0; /* Темно-серый цвет для главных заголовков */
 }
 
-/* Дополнительное выделение для h2 */
+/* Дополнительное выделение для h3 */
 h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #2f3b42; /* Темно-серый цвет для главных заголовков */
 }
 
@@ -208,7 +208,7 @@ table {
     margin-left: auto;
     margin-right: auto;
     border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
 }
 
 table, th, td {
