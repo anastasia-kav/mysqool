@@ -72,24 +72,9 @@ WSGI_APPLICATION = 'my_school.wsgi.application'
 
 
 # Получаем DATABASE_URL из переменных окружения
-DATABASE_URL = os.getenv('DATABASE_URL')
-
-if DATABASE_URL:
-    # Разбираем строку подключения
-    url = urlparse(DATABASE_URL)
-
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': url.path[1:],  # Имя базы данных (убираем первый символ "/")
-            'USER': url.username,
-            'PASSWORD': url.password,
-            'HOST': url.hostname,
-            'PORT': url.port,
-        }
-    }
-else:
-    raise ImproperlyConfigured("DATABASE_URL environment variable is missing")
+DATABASES = {
+    'default': dj_database_url.config(default=os.getenv('DATABASE_URL'))
+}
 
 
 
