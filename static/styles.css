@@ -1,65 +1,66 @@
+/* styles.css */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-}
-
-.navbar {
-    background-color: #2c3e50;
-    padding: 10px 20px;
-    color: #fff;
-}
-
-.navbar .container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
 }
 
-.navbar .logo {
-    font-weight: bold;
-    font-size: 20px;
-    text-decoration: none;
+header {
+    background-color: #333;
     color: white;
-}
-
-.navbar .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-}
-
-.navbar .nav-links li a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s;
-}
-
-.navbar .nav-links li a:hover {
-    color: #f1c40f;
+    padding: 1rem;
 }
 
 .hero-image {
-    background: url('/static/images/hero.jpg') no-repeat center center/cover;
-    padding: 100px 20px;
-    color: white;
-    text-align: center;
-    background-color: #34495e; /* fallback color */
+    padding: 2rem;
 }
 
-.about-school, .courses {
-    padding: 40px 20px;
-    max-width: 900px;
-    margin: auto;
+nav {
+    background-color: #444;
+    padding: 0.5rem;
+}
+
+nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+section {
+    flex: 1;
+    padding: 2rem;
+}
+
+.course-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.course-list li {
+    margin-bottom: 2rem;
+}
+
+.course-list img {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto 1rem;
 }
 
 footer {
-    background-color: #2c3e50;
+    background-color: #333;
     color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    position: relative;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }

@@ -5,27 +5,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Добро пожаловать в онлайн школу!</title>
+    <title>Добро пожаловать в MySQooL!</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}">
 </head>
 <body>
-
-    <nav class="navbar">
-        <div class="container">
-            <a href="/" class="logo">My SQooL</a>
-            <ul class="nav-links">
-                <li><a href="/">Главная страница</a></li>
-                <li><a href="{% url 'course_list' %}">Наши курсы</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <header>
-        <div class="hero-image">
-            <h1>Добро пожаловать в нашу онлайн школу!</h1>
-            <p>Мы предлагаем лучшие курсы для профессионалов и новичков.</p>
-        </div>
+        <h1>Добро пожаловать в нашу онлайн школу MySQooL!</h1>
+        <p>Мы предлагаем лучшие курсы для профессионалов и новичков.</p>
     </header>
+
+    <nav>
+        <a href="{% url 'home' %}">Главная страница</a>
+        <a href="{% url 'course_list' %}">Наши курсы</a>
+    </nav>
 
     <section class="about-school">
         <h2>О школе</h2>
@@ -42,6 +34,5 @@
     <footer>
         <p>&copy; 2025 MySQooL. Все права защищены.</p>
     </footer>
-
 </body>
 </html>
