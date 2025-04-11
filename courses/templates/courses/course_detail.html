@@ -33,8 +33,9 @@
             <tr>
                 <th>№</th>
                 <th>Название урока</th>
-                <th>Содержание</th>
                 <th>Продолжительность (недели)</th>
+                <th>Содержание</th>
+
             </tr>
         </thead>
         <tbody>
@@ -42,8 +43,9 @@
             <tr>
                 <td>{{ forloop.counter }}</td> <!-- Выводим номер урока -->
                 <td>{{ lesson.title }}</td>
-                <td>{{ lesson.content|linebreaksbr }}</td> <!-- Применяем фильтр для переноса строк -->
                 <td>{{ lesson.duration }}</td>
+                <td>{{ lesson.content|linebreaksbr }}</td> <!-- Применяем фильтр для переноса строк -->
+
             </tr>
             {% empty %}
             <tr>
