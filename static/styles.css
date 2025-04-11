@@ -7,10 +7,11 @@ body {
     flex-direction: column;
     min-height: 100vh;
     text-align: center;
+    background-color: #f4f7fa; /* Легкий фон для страницы */
 }
 
 header {
-    background-color: #333;
+    background-color: #2f3b42; /* Темно-серый фон */
     color: white;
     padding: 1rem;
 }
@@ -21,7 +22,7 @@ header {
 
 /* Навигация */
 nav {
-    background-color: #444;
+    background-color: #4b5d63; /* Серо-голубой фон */
     padding: 0.5rem;
 }
 
@@ -30,7 +31,7 @@ nav a {
     margin: 0 1rem;
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px; /* Сделаем текст чуть больше */
+    font-size: 18px;
 }
 
 nav a:hover {
@@ -50,13 +51,13 @@ section {
 
 .course-list li {
     margin-bottom: 2rem;
-    text-align: center; /* Выравнивание текста в списке */
+    text-align: center;
 }
 
 .course-list li a {
     text-decoration: none;
     color: white;
-    background-color: #28a745; /* Зеленый фон */
+    background-color: #6c7c80; /* Серо-голубой фон для кнопок */
     padding: 12px 30px;
     border-radius: 8px;
     font-size: 18px;
@@ -66,7 +67,7 @@ section {
 }
 
 .course-list li a:hover {
-    background-color: #218838; /* Тёмно-зеленый цвет при наведении */
+    background-color: #5a6a6f; /* Темнее серо-голубой при наведении */
 }
 
 /* Изображения курсов */
@@ -81,26 +82,37 @@ section {
 /* Футер */
 footer {
     text-align: center;
-    padding: 20px 0; /* Отступы */
-    background-color: #f1f1f1; /* Легкий фон для футера */
+    padding: 20px 0;
+    background-color: #e2e7ec; /* Светлый серый фон для футера */
     position: relative;
     width: 100%;
     margin-top: auto; /* Привязка футера к низу страницы */
 }
 
 footer p {
-    margin: 0; /* Убираем лишний отступ для текста в футере */
+    margin: 0;
+    color: #4b5d63; /* Цвет для текста в футере */
 }
 
 /* Блоки с текстом */
 h1, h2 {
-    font-size: 2rem; /* Размер заголовков */
-    color: #333;
+    font-size: 2rem;
+    color: #4b5d63; /* Серо-голубой цвет для заголовков */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
+/* Дополнительное выделение для h1 */
+h1 {
+    font-size: 3rem;
+    color: #2f3b42; /* Темно-серый цвет для главных заголовков */
+}
+
+/* Тексты параграфов */
 p {
     font-size: 1.1rem;
-    color: #555;
+    color: #6c7c80; /* Светло-серый для текста */
 }
 
 /* Для кнопок в навигации */
@@ -108,7 +120,7 @@ nav a {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #7a8b8e; /* Серо-голубой фон для кнопок */
     color: white;
     text-align: center;
     border-radius: 5px;
@@ -116,7 +128,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #0056b3;
+    background-color: #5e6e73; /* Темнее при наведении */
 }
 
 /* Для выравнивания всего контента */
@@ -124,11 +136,6 @@ nav a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-}
-
-/* Центрирование текста в заголовках */
-h1, h2 {
-    text-align: center;
 }
 
 /* Стили для формы (если она есть) */
@@ -142,7 +149,7 @@ input, select, textarea {
 
 /* Стили для кнопок на странице курсов */
 .course-list li a {
-    background-color: #28a745;
+    background-color: #6c7c80;
     color: white;
     padding: 12px 30px;
     border-radius: 8px;
@@ -153,5 +160,5 @@ input, select, textarea {
 }
 
 .course-list li a:hover {
-    background-color: #218838;
+    background-color: #5a6a6f;
 }
